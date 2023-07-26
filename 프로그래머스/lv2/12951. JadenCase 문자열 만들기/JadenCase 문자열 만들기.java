@@ -19,8 +19,20 @@ class Solution {
         return stb.toString();
         }
 }
+// 런타임 에러
 
-
+// class Solution {
+//     public String solution(String s) {
+        
+//         String[] str = s.split(" ");
+        
+//        for (int i = 0; i < str.length; i++) {
+//             str[i] = Character.toUpperCase(str[i].charAt(0)) + str[i].substring(1).toLowerCase();
+//         }
+        
+//         return String.join(" ",str);
+//     }
+// }
 
 
 
