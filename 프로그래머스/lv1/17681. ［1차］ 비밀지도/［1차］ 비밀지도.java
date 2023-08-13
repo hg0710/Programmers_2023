@@ -32,19 +32,21 @@
 //         return answer;
 //     }
 // }
+
+
 class Solution {
   public String[] solution(int n, int[] arr1, int[] arr2) {
-        String[] result = new String[n];
-        for (int i = 0; i < n; i++) {
-            result[i] = Integer.toBinaryString(arr1[i] | arr2[i]);
-        }
+      String[] answer = new String[n];
+      String temp;
 
-        for (int i = 0; i < n; i++) {
-            result[i] = String.format("%" + n + "s", result[i]);
-            result[i] = result[i].replaceAll("1", "#");
-            result[i] = result[i].replaceAll("0", " ");
-        }
+      for(int i = 0 ; i < n ; i++){
+          temp = String.format("%16s", Integer.toBinaryString(arr1[i] | arr2[i]));
+          temp = temp.substring(temp.length() - n);
+          temp = temp.replaceAll("1", "#");
+          temp = temp.replaceAll("0", " ");
+          answer[i] = temp;
+      }
 
-        return result;
-    }
+      return answer;
+  }
 }
