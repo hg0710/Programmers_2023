@@ -3,7 +3,7 @@ class Solution {
     public List<Integer> solution(int N, int[] stages) {
         
         int[] fail = new int[N];
-        
+
         for(int i =0 ; i< stages.length ;i++){
             if(stages[i] <= N){
                 fail[stages[i]-1]++;   
